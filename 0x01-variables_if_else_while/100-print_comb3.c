@@ -6,6 +6,9 @@
  */
 int main(void)
 {
+	int i;
+	int j;
+
 	for (int i = 0; i <= 9; i++)
 	{
 		for (int j = 0; j <= 9; j++)
@@ -22,6 +25,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
