@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * @i: numbers that are multiples of 3 and 5 upto 1024
  * Return: sum of multiples of 3 and 5
  */
 int main(void)
@@ -9,7 +8,7 @@ int main(void)
 	int i;
 	int sum;
 
-	for (i = 0; i < 1024; i++)
+	for (i = 3; i < 1024; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
