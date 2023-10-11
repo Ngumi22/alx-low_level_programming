@@ -3,6 +3,7 @@
 #include <unistd.h>
 /**
  * print_alphabet - Entry point
+ * Description: 'function that prints the alphabet (c) in lowercase'
  * Return: Always 0 (Success)
  */
 int _putchar(char c);
