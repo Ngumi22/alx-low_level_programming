@@ -6,6 +6,7 @@ int main(void)
 	unsigned long sum = 0;
 
 	while (fib[1] <= 4000000)
+		unsigned long long next = fib[0] + fib[1];
 	{
 		if (fib[1] % 2 == 0)
 		{
