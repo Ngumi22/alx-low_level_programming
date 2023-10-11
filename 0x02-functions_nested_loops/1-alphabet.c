@@ -3,8 +3,8 @@
 #include <unistd.h>
 /**
  * print_alphabet - Entry point
- * Description: Prints the lowercase alphabet followed by new line
- * Return: Always 0 (Success)
+ * print_alphabet: Prints lowercase letter char c followed by newline
+ * Return: 0
  */
 int _putchar(char c);
 void print_alphabet(void)
