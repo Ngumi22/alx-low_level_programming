@@ -6,14 +6,14 @@
  */
 void print_rev(char *s)
 {
-	if (str == NULL)
+	if (s == NULL)
 	{
 		return;
 	}
 
 	int length = 0;
 
-	while (str[length] != '\0')
+	while (s[length] != '\0')
 	{
 		length++;
 	}
@@ -25,8 +25,8 @@ void print_rev(char *s)
 	{
 		char temp = str[start];
 
-		str[start] = str[end];
-		str[end] temp;
+		s[start] = str[end];
+		s[end] temp;
 
 		start++;
 		end--;
