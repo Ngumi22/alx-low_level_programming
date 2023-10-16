@@ -18,17 +18,9 @@ void print_rev(char *s)
 		length++;
 	}
 
-	int start = 0;
-	int end = length - 1;
-
-	while (start < end)
+	for (int i = length - 1; i >= 0; i--)
 	{
-		char temp = str[start];
-
-		s[start] = str[end];
-		s[end] temp;
-
-		start++;
-		end--;
+		_putchar(s[i]);
 	}
+	_putchar ('\n');
 }
