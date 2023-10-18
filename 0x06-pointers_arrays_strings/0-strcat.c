@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * *_strcat - Concatenates two strings
- * and adds terminatinng null byte
+ * _strcat - Concatenates two strings
  * @dest - First string to concatenate
  * @src - Second string to concatenate
  * Return: Concatenated strings
