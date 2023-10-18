@@ -2,8 +2,8 @@
 /**
  * *_strcat - Concatenates two strings
  * and adds terminatinng null byte
- * @dest - First string
- * @src - Second string
+ * @dest - First string to concatenate
+ * @src - Second string to concatenate
  * Return: Concatenated strings
  */
 char *_strcat(char *dest, char *src)
@@ -21,5 +21,6 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	*dest_end = '\0';
+
 	return (dest);
 }
