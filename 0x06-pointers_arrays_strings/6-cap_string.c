@@ -10,10 +10,12 @@ char *cap_string(char *str)
 {
 	char separators[] = " \t\n,;.!?\"(){}";
 	int capitalize = 1;
+	int i;
+	int j;
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (int j = 0; separators[j] != '\0'; j++)
+		for (j = 0; separators[j] != '\0'; j++)
 		{
 			if (str[i] == separators[j])
 			{
