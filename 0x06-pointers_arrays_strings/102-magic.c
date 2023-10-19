@@ -1,8 +1,5 @@
 #include <stdio.h>
-/**
- * main - Entry point
- * Return: Always 0 (Success)
- */
+
 int main(void)
 {
 	int n;
@@ -10,7 +7,6 @@ int main(void)
 	int *p;
 
 	a[2] = 1024;
-
 	p = &n;
   /*
    * write your line of code here...
