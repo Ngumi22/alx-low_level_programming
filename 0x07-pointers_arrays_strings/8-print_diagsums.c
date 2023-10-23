@@ -5,6 +5,7 @@
  * diagonals of a square matrix of integers
  * @a: Matrix of integers
  * @size: Size of the matrix
+ * Return: 
  */
 void print_diagsums(int *a, int size)
 {
@@ -12,7 +13,7 @@ void print_diagsums(int *a, int size)
 	int sum_diag2 = 0;
 	int i;
 
-	for (int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		sum_diag1 += a[i];
 		a += size;
