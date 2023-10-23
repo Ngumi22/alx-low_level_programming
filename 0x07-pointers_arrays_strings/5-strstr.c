@@ -8,14 +8,14 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	if (*needle == '\0')
+	if (*needle[index] == '\0')
 	{
 		return (haystack);
 	}
 	while (*haystack)
 	{
 		int index = 0;
-		int *start = haystack;
+		char *start = haystack;
 
 		while (haystack[index] == needle[index] && needle[index] != '\0')
 		{
