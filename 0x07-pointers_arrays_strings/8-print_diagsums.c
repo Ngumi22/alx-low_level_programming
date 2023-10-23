@@ -9,18 +9,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int a, b, c;
+	int sum_diag1 = 0;
+	int sum_diag2 = 0;
 
-	a = 0;
-	b = 0;
-
-	for (c = 0; c < size; c++)
+	for (int i = 0; i < size; i++)
 	{
-		a = a + x[c * size + c];
+		sum_diag1 += a[i * size + i];
+		sum_diag2 += a[i * size + (size - 1 - i)];
 	}
-	for (c = size - 1; c >= 0; c--)
-	{
-		b += x[c * size + (size - c - 1)];
-	}
-	printf("%d, %d\n", a, b);
+	printf("%d, %d\n", sum_diag1, sum_diag2);
 }
