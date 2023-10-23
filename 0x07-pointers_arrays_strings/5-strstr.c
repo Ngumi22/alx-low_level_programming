@@ -9,23 +9,23 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int len_haystack = strlen(haystack);
-	int len_needle = strlen(needle);
-	int i, j;
-
-	for (int i = 0; i <= len_haystack - len_needle; i++)
+	if (*needle == 0)
 	{
-		for (j = 0; j < len_needle; j++)
-		{
-			if (haystack[i + j] != needle[j])
-			{
-				break;
-			}
-		}
-		if (j == len_needle)
-		{
-			return (haystack + i);
-		}
+		return (haystack);
 	}
-	return (0);
+	while (*haystack)
+	{
+		int index = 0;
+
+		while (haystack[index + 1] == needle[index])
+		{
+			if (needle[index + 1] == '\0')
+			{
+				return (haystack);
+			}
+			index++;
+		}
+	haystack++;
+	}
+	return ('\0');
 }
