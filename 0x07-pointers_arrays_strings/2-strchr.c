@@ -1,8 +1,8 @@
-#include "main.n"
+#include "main.h"
 /**
- * _strchr - Locates a character in a string
- * @s: String where character is
- * @c: Character to locate
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
  * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
