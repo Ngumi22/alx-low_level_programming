@@ -22,10 +22,10 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		if (j == needle_len)
+		if (j == len_needle)
 		{
-			return ((char *)(haystack + i));
+			return (haystack + i);
 		}
 	}
-	return ('\0');
+	return (0);
 }
