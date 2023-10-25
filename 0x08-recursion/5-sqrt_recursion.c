@@ -2,6 +2,7 @@
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: Input value
+ * @x: Input value
  * Return: Natural square root
  */
 int _sqrt(int n, int x);
@@ -18,11 +19,10 @@ int _sqrt_recursion(int n)
 	}
 	return (_sqrt(n, 1));
 }
-
 /**
  * _sqrt - Returns the square root
- * @n: Input
- * @x: Input
+ * @x: Input value
+ * @n: Input value
  * Return: Square root
  */
 int _sqrt(int n, int x)
