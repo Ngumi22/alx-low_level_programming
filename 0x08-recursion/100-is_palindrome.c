@@ -29,7 +29,7 @@ int is_palindrome_recurssive(char *s, int b, int e)
 {
 	if (*(s + b) == *(s + e))
 	{
-		if (b == e || b == end + 1)
+		if (b == e || b == e + 1)
 		{
 			return (1);
 			return (0 + is_palindrom_recurssive(s, b + 1, e - 1));
