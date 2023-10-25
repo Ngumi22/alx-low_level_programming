@@ -32,10 +32,10 @@ int is_palindrome_recurssive(char *s, int b, int e)
 		if (b == e || b == e + 1)
 		{
 			return (1);
-			return (0 + is_palindrome_recurssive(s, b + 1, e - 1));
 		}
-		return (0);
+		return (0 + is_palindrome_recurssive(s, b + 1, e - 1));
 	}
+	return (0);
 }
 /**
  * is_palindrome - returns 1 if a string is a
