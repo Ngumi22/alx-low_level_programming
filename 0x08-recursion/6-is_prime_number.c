@@ -7,7 +7,22 @@
  * Return: Return 1 if prime number and
  * 0 if otherwise
  */
+int prime_number(int n, int i);
 int is_prime_number(int n, int i)
+{
+	if (n <= 1)
+	{
+		return (0);
+	}
+	return (prime_number(n, n - 1));
+}
+/**
+ * prime_number - Return a prime number
+ * @n: Input
+ * @i: Input
+ * Return: Prime number
+ */
+int prime_number(int n, int i)
 {
 	if (n  <= 1)
 	{
