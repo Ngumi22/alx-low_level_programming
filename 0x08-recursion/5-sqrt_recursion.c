@@ -29,7 +29,7 @@ int _sqrt(int n, int x)
 {
 	if (x * x == n)
 	{
-		return (n);
+		return (x);
 	}
 	if (x * x > n)
 	{
