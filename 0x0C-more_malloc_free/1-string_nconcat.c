@@ -39,5 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	strcpy(concatenated, s1);
 	strncat(concatenated, s2, n);
+	concatenated[total_length] = '\0';
+
 	return (concatenated);
 }
