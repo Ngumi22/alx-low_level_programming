@@ -1,17 +1,10 @@
-section .data
-	hello_message db "Hello, Holberton", 0
-	format db "%s", 0
-
-section .text
-    extern printf
-    global main
-
+global    main
+          extern    printf
 main:
-    mov rdi, format
-    mov rsi, hello_message
-    call printf
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov 	eax, 0
+	  ret
+format: db `Hello, Holberton\n`,0
 
-    ; Exit the program
-    mov rax, 60         ; syscall: exit
-    xor rdi, rdi        ; status: 0
-    syscall
