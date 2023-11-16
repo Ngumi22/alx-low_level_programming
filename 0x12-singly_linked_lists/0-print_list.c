@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - prints all the elements of a list
- * @h: Points to the list list_t
- * Return: the number of nodes
+ * print_list - prints all the elements of a linked list
+ * @h: Pointer to the list list_t
+ * Return: number of nodes printed
  */
 size_t print_list(const list_t *h)
 {
@@ -14,11 +14,11 @@ size_t print_list(const list_t *h)
 	{
 		if (current->str == NULL)
 		{
-			printf("[0] (nil)\n");
+			_putchar("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%u] %s\n", current->len, current->str);
+			_putchar("[%u] %s\n", current->len, current->str);
 		}
 
 		current = current->next;
