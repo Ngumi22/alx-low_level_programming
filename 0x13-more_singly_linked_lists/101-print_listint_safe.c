@@ -27,7 +27,6 @@ size_t print_listint_safe(const listint_t *head)
 		if (tortoise == hare)
 		{
 			printf("-> [%p] %d\n", (void *)tortoise, tortoise->n);
-			printf("Loop detected, exiting...\n");
 			exit(98);
 		}
 	}
