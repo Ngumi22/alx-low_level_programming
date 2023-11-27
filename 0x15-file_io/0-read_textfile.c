@@ -9,36 +9,29 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *file;
-	ssize_t bytesRead;
+	ssize_t bytesRead, bytesWritten;
 	char *buffer;
-	ssize_t bytesWritten;
 
 	if (filename == NULL)
 	{
 		fprintf(stderr, "Error: filename is NULL\n");
 		return (0);
 	}
-
 	file = fopen(filename, "r");
-
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Couldn't open file %s\n", filename);
 		return (0);
 	}
-
 	buffer = (char *)malloc(letters + 1);
-
 	if (buffer == NULL)
 	{
 		fprintf(stderr, "Error: Memory allocation failed\n");
 		fclose(file);
 		return (0);
 	}
-
 	bytesRead = fread(buffer, 1, letters, file);
 	fclose(file);
-
 	if (bytesRead == 0)
 	{
 		fprintf(stderr, "Error: Couldn't read from file\n");
@@ -46,13 +39,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buffer[bytesRead] = '\0';
-
 	bytesWritten = write(STDOUT_FILENO, buffer, bytesRead);
 	free(buffer);
 
-	if (bytesWritten != bytesRead) 
+	if (bytesWritten != bytesRead)
 	{
-		fprintf(stderr, "Error: Write failed or did not write expected amount of bytes\n");
+		fprintf(stderr, "Write failed or did not write expected amount of bytes\n");
 		return (0);
 	}
 	return (bytesRead);
