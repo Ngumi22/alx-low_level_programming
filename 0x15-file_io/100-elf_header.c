@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 {
 	int fd;
 	ssize_t bytes_read;
+	Elf64_Ehdr elf_header;
 
 	if (argc != 2)
 	{
@@ -59,8 +60,6 @@ int main(int argc, char *argv[])
 		perror("Error");
 		exit(98);
 	}
-	Elf64_Ehdr elf_header;
-
 	bytes_read = read(fd, &elf_header, sizeof(elf_header));
 
 	if (bytes_read != sizeof(elf_header) || elf_header.e_ident[EI_MAG0] != ELFMAG0
